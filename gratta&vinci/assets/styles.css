@@ -1,0 +1,32 @@
+.invisible {
+    visibility: hidden;;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #bebebe 50%, #ffffff 50% );
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+}
+
+.box.scratched:hover {
+    cursor: default;
+}
+
+.altezza {
+    height: 15vh;
+}
+
+.dimensione-testo {
+    font-size: 40px;
+}
+
+@media (max-width: 1023px) {
+    .dimensione-testo {
+        font-size: 22px;
+    }
+
+    .casella {
+        text-align: center;
+    }
+}

@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.coin {
+    margin-top: 20px;
+    cursor: pointer;
+    animation: jump-rotate 1s ease-in-out forwards;
+}
+
+.coin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    border-radius: 50%;
+}
+
+@keyframes jump-rotate {
+    0% {
+        transform: translateY(0) rotateX(0deg);
+    }
+    10% {
+        transform: translateY(-25%) rotateX(90deg);
+    }
+    20% {
+        transform: translateY(-50%) rotateX(180deg);
+    }
+    30% {
+        transform: translateY(-75%) rotateX(270deg);
+    }
+    40% {
+        transform: translateY(-100%) rotateX(360deg);
+    }
+    50% {
+        transform: translateY(-75%) rotateX(450deg);
+    }
+    60% {
+        transform: translateY(-50%) rotateX(540deg);
+    }
+    70% {
+        transform: translateY(-25%) rotateX(630deg);
+    }
+    80% {
+        transform: translateY(-25%) rotateX(720deg);
+    }
+    90% {
+        transform: translateY(-25%) rotateX(810deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(900deg);
+    }
+}
+
+
+
+

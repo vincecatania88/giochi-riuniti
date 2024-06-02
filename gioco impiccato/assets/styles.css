@@ -1,0 +1,39 @@
+.body-up {
+    display: flex;
+    margin-top: -30px;
+    margin-left: -10px;
+}
+
+.body-down {
+    display: flex;
+    margin-top: -30px;
+    margin-left: -5px;
+}
+
+#head {
+    font-size: 30px;
+}
+
+.body-up div {
+    font-size: 50px;
+}
+
+.body-down div {
+    font-size: 50px;
+}
+
+.container-impic {
+    display: flex;
+    flex-direction: column;
+    border-right: 5px  solid;
+    border-top: 5px solid ;
+    width: 25%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+.container-answer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}

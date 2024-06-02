@@ -1,0 +1,8 @@
+#paper, #scissors, #stone, #paper-player-1, #scissors-player-1, #stone-player-1, #paper-player-2, #scissors-player-2, #stone-player-2 {
+    font-size: 100px;
+    cursor: pointer;
+}
+
+#paper:hover, #scissors:hover, #stone:hover, #paper-player-2:hover, #scissors-player-2:hover, #stone-player-2:hover  {
+    font-size: 120px;
+}
