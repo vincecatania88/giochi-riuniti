@@ -73,6 +73,20 @@
     <div class="container mt-3 text-center">
         <h3 id="countdown" class="mt-3"></h3>
     </div>
+
+    <div class="modal fade" id="letterModal" tabindex="-1" aria-labelledby="letterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="letterModalLabel">Lettera selezionata</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 id="randomLetterModal" class="text-center"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
   
     <div class="container mt-5 d-flex justify-content-center">
         <table class="table table-bordered text-center" id="data-table" style="display:none;">
@@ -145,19 +159,6 @@
         <button class="btn btn-dark text-white" id="start-timer-button" disabled>Avvia Timer</button>
     </div>
 
-    <div class="modal fade" id="letterModal" tabindex="-1" aria-labelledby="letterModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="letterModalLabel">Lettera selezionata</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h1 id="randomLetterModal" class="text-center"></h1>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="./assets/script.js"></script>
 </body>
 </html>
