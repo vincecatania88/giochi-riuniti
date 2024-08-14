@@ -1,0 +1,101 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.table td.occupied {
+    background-color: #333;
+    color: #fff;
+}
+
+.table th:first-child {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    width: 30px; /* Rimpicciolisci la colonna delle lettere */
+}
+
+.table th:not(:first-child) {
+    width: 30px; /* Mantieni una larghezza uniforme per le colonne numeriche */
+}
+
+.table th:first-child, .table td:first-child {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-section {
+    margin-top: 20px;
+}
+
+#ship-form label {
+    display: block;
+}
+
+#reset-placement {
+    margin-top: 10px;
+}
+
+.table-cell {
+    border: 1px solid #ddd; /* Mantieni i bordi delle celle */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #fff; /* Colore di sfondo predefinito delle celle */
+}
+
+
+.table-cell.hit {
+    background-color: red !important; /* Forza il colore rosso per testare */
+}
+/* Aggiungi al tuo file styles.css */
+
+.table-secondary .table-cell.blue {
+    background-color: #0dcaf0;
+    color: #fff;
+}
+
+.table-secondary .table-cell.yellow {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.table-secondary .table-cell.red {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.flex-fill {
+    flex: 1; /* Fa sì che i pulsanti si espandano per occupare spazio uguale */
+}
+
+.btn-equal-height {
+    height: 50px; /* Imposta l'altezza desiderata */
+    display: flex;
+    align-items: center; /* Allinea il testo verticalmente */
+}
+
