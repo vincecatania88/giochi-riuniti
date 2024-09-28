@@ -99,3 +99,16 @@
     align-items: center; /* Allinea il testo verticalmente */
 }
 
+.blue {
+    background-color: #0dcaf0 !important;
+}
+
+.yellow {
+    background-color: #ffc107 !important;
+}
+
+.red {
+    background-color: #dc3545 !important;
+}
+
+
