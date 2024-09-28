@@ -2,7 +2,7 @@
 const playerForm = document.getElementById('player-form');
 const playerOneInput = document.getElementById('playerOne');
 const dataTable = document.getElementById('data-table');
-const randomLetterElement = document.getElementById('randomLetter');
+/* const randomLetterElement = document.getElementById('randomLetter'); */
 const resetButton = document.getElementById('reset-button');
 const clearButton = document.getElementById('clear-button');
 const startTimerButton = document.getElementById('start-timer-button');
@@ -10,6 +10,8 @@ const randomLetterModalElement = document.getElementById('randomLetterModal');
 const countdownElement = document.getElementById('countdown');
 const totalScoreInput = document.querySelector('.total-score-input');
 const totalCell = document.getElementById('total-cell');
+const letterInput = document.getElementById('letterInput');
+
 
 let playerName = '';
 let selectedLetter = '';
@@ -20,7 +22,7 @@ function generateRandomLetter() {
     return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
-function startGame(event) {
+/* function startGame(event) {
     event.preventDefault();
     playerName = playerOneInput.value.trim();
 
@@ -35,7 +37,30 @@ function startGame(event) {
     document.body.insertBefore(playerNameElement, dataTable);
 
     clearTable(); 
-}
+} */
+
+        function startGame(event) {
+            event.preventDefault();
+            playerName = playerOneInput.value.trim();
+            selectedLetter = letterInput.value.trim().toUpperCase();
+        
+            if (!selectedLetter || selectedLetter.length !== 1) {
+                alert('Inserisci una lettera valida!');
+                return;
+            }
+        
+            playerForm.style.display = 'none';
+            dataTable.style.display = 'table';
+        
+            randomLetterElement.textContent = `Lettera selezionata: ${selectedLetter}`;
+        
+            const playerNameElement = document.createElement('h3');
+            playerNameElement.textContent = `Giocatore: ${playerName}`;
+            document.body.insertBefore(playerNameElement, dataTable);
+        
+            clearTable();
+        }
+    
 
 function checkWordStartsWithLetter(word) {
     return word.trim().toUpperCase().startsWith(selectedLetter);
@@ -61,7 +86,7 @@ function checkWordsEntered() {
 
 let currentGameScore = 0; 
 
-function resetGame() {
+/* function resetGame() {
     const wordInputs = document.querySelectorAll('.word-input');
     wordInputs.forEach(input => {
         input.disabled = false;
@@ -81,7 +106,31 @@ function resetGame() {
     totalCell.dataset.total = totalScore;
 
     currentGameScore = 0;
-}
+} */
+
+        function resetGame() {
+            const wordInputs = document.querySelectorAll('.word-input');
+            wordInputs.forEach(input => {
+                input.disabled = false;
+            });
+        
+            const scoreInputs = document.querySelectorAll('.score-input');
+            scoreInputs.forEach(input => {
+                input.disabled = true;
+            });
+        
+            totalScore += currentGameScore;
+        
+            clearTable();
+            playerForm.style.display = 'block'; // Mostra nuovamente il form
+            dataTable.style.display = 'none';   // Nascondi la tabella
+        
+            totalCell.textContent = totalScore;
+            totalScoreInput.value = totalScore;
+            totalCell.dataset.total = totalScore;
+        
+            currentGameScore = 0;
+        }
 
 function clearTable() {
     const wordInputs = document.querySelectorAll('.word-input');
